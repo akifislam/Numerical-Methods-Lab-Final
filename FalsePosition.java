@@ -2,6 +2,19 @@ package Akif;
 
 public class FalsePosition {
 
+    double left_guess = -5;
+    double right_guess = 5;
+    int maxIteration = 20;
+
+    //Constructor
+    FalsePosition(double a,double b,int maxIteration){
+        this.left_guess = a;
+        this.right_guess = b;
+        this.maxIteration= maxIteration;
+        FalsePosition(left_guess,right_guess,maxIteration);
+    }
+
+
     // A function just holding the equation
     public static double func(double x){
         return Equation.solve(x);
@@ -24,7 +37,7 @@ public class FalsePosition {
 
         while (iteration_count<maxIteration) {
 
-            System.out.println("Iteration : " + (++iteration_count));
+            System.out.print("Iteration : " + (++iteration_count) + " | ");
 
             // Formula : (af(b) - bf(a)) / (f(b) - f(a))
             root = (a* func(b) - b* func(a)) / (func(b)- func(a));
@@ -42,9 +55,9 @@ public class FalsePosition {
             else {
                 a = root;
             }
-            System.out.println("a = " + a + ", b = " +b + ", root = " + root +"\n");
+            System.out.println("a = " + a + ", b = " +b + ", root = " + root);
         }
-        System.out.println("Finally, Using False Position Method, the root is " +root);
+        System.out.println("\nFinally, Using False Position Method, the root is " +root);
 
 
     }
