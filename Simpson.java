@@ -1,17 +1,15 @@
 package Akif;
 
-public class Simpson {
+class Simpson {
 
     // Function to calculate f(x)
-    static float func(float x) {
+    public static float func(float x) {
         return (float) Math.log(x);
     }
 
-    // Function for approximate integral
-    static float simpsons_(float ll, float ul,
-                           int n) {
+    public static float simpsons_(float a, float b, int n) {
         // Calculating the value of h
-        float h = (ul - ll) / n;
+        float h = (b - a) / n;
 
         // Array for storing value of x
         // and f(x)
@@ -20,11 +18,11 @@ public class Simpson {
 
         // Calculating values of x and f(x)
         for (int i = 0; i <= n; i++) {
-            x[i] = ll + i * h;
+            x[i] = a + i * h;
             fx[i] = func(x[i]);
         }
 
-        // Calculating result
+
         float res = 0;
         for (int i = 0; i <= n; i++) {
             if (i == 0 || i == n)
@@ -50,8 +48,7 @@ public class Simpson {
         // Number of interval
         int n = 6;
 
-        System.out.println(simpsons_(lower_limit,
-                upper_limit, n));
+        System.out.println(simpsons_(lower_limit, upper_limit, n));
     }
 }
 

@@ -1,8 +1,24 @@
 package Akif;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        Random r = new Random();
+
+        int a = r.nextInt(100) *(-1); // It will generate -99 to 0
+        int b = r.nextInt(100); // It will generate 0 to 99
+        Ran
+        Bisection.bisect(a,b,0.001);
+
+        while(!Bisection.isOK(a,b)){
+            a = r.nextInt(100) *(-1);
+            b = r.nextInt(100);
+            Bisection.bisect(a,b,0.001);
+        }
+
 
         // Calling Using Constructor
 //        Bisection b = new Bisection(1,2,0.001);
