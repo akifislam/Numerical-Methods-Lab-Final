@@ -13,6 +13,7 @@ public class Bisection {
         bisect(left_guess, right_guess, EPSILON);
     }
 
+    
     // A function just holding the equation
 
     public static boolean isOK(double a, double b) {
