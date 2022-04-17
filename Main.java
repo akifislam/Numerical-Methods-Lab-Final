@@ -24,9 +24,12 @@ public class Main {
 
         double X[] = { 0, 1, 2, 5};
         double Y[] = { 2, 3, 12, 147};
-        LagrangeInterpolation l = new LagrangeInterpolation(X,Y,3);
+//        LagrangeInterpolation l = new LagrangeInterpolation(X,Y,3);
 
 
+        double P[] = { 0, 1, 2};
+        double Q[] = { 1,6, 17};
+        PolynomialLS pl = new PolynomialLS(P,Q);
 //        LeastSquare ls = new LeastSquare(X,Y);
 
 
